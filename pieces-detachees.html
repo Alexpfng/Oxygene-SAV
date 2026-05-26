@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Pièces Détachées 100% Origine Constructeur — OXYGEN SAV - Centre de réparation Hi-Fi, Audio-Pro et Instruments de Musique à Lyon.">
+  <meta name="author" content="Yves CHADI">
+  <title>Pièces Détachées — OXYGEN SAV</title>
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a3d8f 100%);
+      padding: 3.5rem 0 3rem;
+      color: #fff;
+    }
+    .page-hero h1 { font-weight: 800; letter-spacing: -.01em; }
+    .page-hero p   { color: rgba(255,255,255,.85); font-size: 1rem; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #0d6efd;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: .35rem;
+    }
+
+    /* Grille catégories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .category-card {
+      background: #fff;
+      border: 1px solid #e6e9ee;
+      border-top: 4px solid #0d6efd;
+      border-radius: .5rem;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 .75rem 2rem rgba(13,110,253,.15);
+    }
+    .category-card-icon {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: #e8f0fe;
+      display: flex; align-items: center; justify-content: center;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .category-card h3 {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+      margin-bottom: .5rem;
+    }
+    .category-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .category-card a {
+      color: #0d6efd;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .category-card a:hover { text-decoration: underline; }
+
+    /* Grille pièces disponibles */
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .part-item {
+      background: #fff;
+      border: 1px solid #e6e9ee;
+      border-radius: .4rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .part-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 .5rem 1.25rem rgba(13,110,253,.12);
+    }
+    .part-brand {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0d6efd;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 0.5rem;
+    }
+    .part-name {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .part-desc {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+    .part-cta {
+      background: #e8f0fe;
+      color: #0d6efd;
+      border: none;
+      border-radius: .25rem;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .part-cta:hover {
+      background: #0d6efd;
+      color: #fff;
+    }
+
+    /* Bloc processus */
+    .process-section {
+      background: #f5f7fa;
+      padding: 3rem 0;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .step-item {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: #0d6efd;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+    .step-content h4 {
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .step-content p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Garantie badge */
+    .guarantee-badge {
+      background: #fff;
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      border-radius: .3rem;
+      margin-bottom: 1.5rem;
+    }
+    .guarantee-badge h4 {
+      color: #28a745;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .guarantee-badge p {
+      color: #666;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* CTA Contact */
+    .cta-contact {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a3d8f 100%);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .cta-contact h2 {
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .cta-contact p {
+      color: rgba(255,255,255,.9);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ======================== HEADER ======================== -->
+<header>
+  <!-- Top bar -->
+  <div class="py-1">
+    <div class="container text-center"></div>
+    <div class="container-fluid">
+      <div class="align-items-center g-0 row">
+        <div class="col">
+          <div class="py-1 ps-md-3">
+            <a href="tel:+33437480823" class="me-md-3 text-decoration-none">
+              <span class="me-md-1">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"/>
+                </svg>
+              </span>
+              <span>04 37 48 08 23</span>
+            </a>
+            <a href="mailto:sav@oxygen.fr" class="text-decoration-none">
+              <span class="me-md-1">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z"/>
+                </svg>
+              </span>
+              <span>sav@oxygen.fr</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-primary navbar navbar-dark navbar-expand-lg py-2 navbar-oxygen">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/Logo_NEW_Lighted_.png" alt="OXYGEN SAV" class="img-fluid logo-navbar">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown-21" aria-controls="navbarNavDropdown-21" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown-21">
+        <ul class="ms-auto navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link px-lg-3 py-lg-4 text-uppercase" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Horaires</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Accueil</a>
+              <a class="dropdown-item" href="#">Téléphone</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Réparations</a>
+              <a class="dropdown-item" href="pieces-detachees.html">Vente Pièces</a>
+              <a class="dropdown-item" href="#">Déplacements</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Téléphone</a>
+              <a class="dropdown-item" href="#">Mail</a>
+              <a class="dropdown-item" href="#">Adresse Postale</a>
+              <a class="dropdown-item" href="#">Google Maps</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-lg-3 py-lg-4 text-uppercase" href="#">English</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================== HERO ======================== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <p class="h6 text-uppercase" style="color: rgba(255,255,255,.9);">Service Vente</p>
+        <h1 class="display-4 mb-3">🔧 Pièces Détachées</h1>
+        <p class="lead mb-4">100% Pièces Certifiées Origine Constructeur — Livrées rapidement en France et Dom-Tom</p>
+        <a href="#categories" class="btn btn-light">Voir les catégories</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== GARANTIE ======================== -->
+<section class="pt-5 pb-3">
+  <div class="container">
+    <div class="guarantee-badge">
+      <h4>✓ Garantie Complète</h4>
+      <p>Toutes nos pièces détachées sont des pièces d'origine certifiées constructeur, garanties et livrées dans leurs emballages d'usine. Chaque article est testé avant expédition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CATÉGORIES ======================== -->
+<section class="pt-5 pb-5" id="categories">
+  <div class="container">
+    <div class="mb-5">
+      <p class="section-label">Nos Domaines</p>
+      <h2 class="section-title mb-4">Catégories de Pièces Détachées</h2>
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <div class="category-card-icon">🎵</div>
+        <h3>Pièces Hi-Fi</h3>
+        <p>Composants pour amplificateurs, lecteurs CD, tuners, équaliseurs</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card-icon">🎧</div>
+        <h3>Pièces Audio Pro</h3>
+        <p>Équipements pour studios, systèmes PA, diffuseurs professionnel</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card-icon">🎸</div>
+        <h3>Instruments de Musique</h3>
+        <p>Pièces pour guitares électriques, claviers, synthétiseurs</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card-icon">🎛️</div>
+        <h3>Équipement DJ</h3>
+        <p>Platines vinyles, tables de mixage, lecteurs CD professionnels</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card-icon">🔌</div>
+        <h3>Composants Électroniques</h3>
+        <p>Condensateurs, transistors, transformateurs, circuits intégrés</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="category-card">
+        <div class="category-card-icon">🛠️</div>
+        <h3>Pièces Mécaniques</h3>
+        <p>Moteurs, courroies, mécanismes de transport, chassis</p>
+        <a href="#" class="text-decoration-none">Explorer <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PIÈCES EN STOCK ======================== -->
+<section class="bg-light pt-5 pb-5">
+  <div class="container">
+    <div class="mb-5">
+      <p class="section-label">Disponible Immédiatement</p>
+      <h2 class="section-title mb-3">Sélection de Pièces par Marque</h2>
+      <p class="text-secondary mb-4">Consultez nos stocks régulièrement mis à jour pour les grandes marques</p>
+    </div>
+
+    <!-- Denon -->
+    <div class="mb-5">
+      <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem;">DENON</h3>
+      <div class="parts-grid">
+        <div class="part-item">
+          <div class="part-brand">Denon</div>
+          <div class="part-name">Bloc d'alimentation PMA-500AE</div>
+          <div class="part-desc">Alimentation origine pour amplificateur HiFi</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Denon</div>
+          <div class="part-name">Moteur Plateau CD</div>
+          <div class="part-desc">Mécanisme de transport CD complet</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Denon</div>
+          <div class="part-name">Panneau Façade DCD-600NE</div>
+          <div class="part-desc">Façade d'origine pour lecteur CD</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Denon</div>
+          <div class="part-name">Transformateur Toroïdal</div>
+          <div class="part-desc">Alimentation haute puissance pour amplificateur</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yamaha -->
+    <div class="mb-5">
+      <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem;">YAMAHA</h3>
+      <div class="parts-grid">
+        <div class="part-item">
+          <div class="part-brand">Yamaha</div>
+          <div class="part-name">Bloc Télécommande THX-500</div>
+          <div class="part-desc">Télécommande compatible pour récepteur</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Yamaha</div>
+          <div class="part-name">Voyant LED d'affichage</div>
+          <div class="part-desc">Diode et circuits d'affichage numérique</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Yamaha</div>
+          <div class="part-name">Clavier de Commande</div>
+          <div class="part-desc">Panneau de contrôle complet avec touches</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Yamaha</div>
+          <div class="part-name">Connecteurs RCA Internes</div>
+          <div class="part-desc">Jacks d'entrée-sortie de qualité audiophile</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bowers & Wilkins -->
+    <div class="mb-5">
+      <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem;">BOWERS & WILKINS</h3>
+      <div class="parts-grid">
+        <div class="part-item">
+          <div class="part-brand">Bowers & Wilkins</div>
+          <div class="part-name">Tweeter haute résolution</div>
+          <div class="part-desc">Transducteur aigus compatible série 800</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Bowers & Wilkins</div>
+          <div class="part-name">Woofer 6,5 pouces</div>
+          <div class="part-desc">Haut-parleur bas-milieu de remplacement</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Bowers & Wilkins</div>
+          <div class="part-name">Filtre Passif Crossover</div>
+          <div class="part-desc">Réseau de séparation fréquentielle d'origine</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Bowers & Wilkins</div>
+          <div class="part-name">Enceinte interne Médium</div>
+          <div class="part-desc">Caisson cavité et support du transducteur</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marantz -->
+    <div class="mb-5">
+      <h3 style="font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem;">MARANTZ</h3>
+      <div class="parts-grid">
+        <div class="part-item">
+          <div class="part-brand">Marantz</div>
+          <div class="part-name">Condensateur Audio Electrolytique</div>
+          <div class="part-desc">Capacités haute fidélité pour circuits d'entrée</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Marantz</div>
+          <div class="part-name">Optique Laser CD</div>
+          <div class="part-desc">Tête de lecture CD haute précision</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Marantz</div>
+          <div class="part-name">Module Amplificateur</div>
+          <div class="part-desc">Carte amplification finale 200W</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+        <div class="part-item">
+          <div class="part-brand">Marantz</div>
+          <div class="part-name">Câbles Internes Blindés</div>
+          <div class="part-desc">Interconnexions d'origine avec blindage</div>
+          <a href="#" class="part-cta">Demander →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PROCESSUS DE COMMANDE ======================== -->
+<section class="process-section">
+  <div class="container">
+    <div class="mb-5">
+      <p class="section-label">Comment Commander</p>
+      <h2 class="section-title">Processus Simple et Rapide</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>Chercher la Pièce</h4>
+          <p>Sélectionnez la pièce qui vous intéresse dans nos catégories ou demandez un devis</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>Confirmer la Disponibilité</h4>
+          <p>Nous vérifions le stock et vous envoyons un devis avec détails de livraison</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Traitement de la Commande</h4>
+          <p>Après confirmation, nous préparons votre commande avec soin</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h4>Livraison Rapide</h4>
+          <p>Envoi de la pièce bien emballée en France et Dom-Tom sous 3-5 jours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== MARQUES TRAITÉES ======================== -->
+<section class="pt-5 pb-5">
+  <div class="container">
+    <div class="mb-5">
+      <p class="section-label">Partenaires Officiels</p>
+      <h2 class="section-title">Nous Travaillons Avec les Plus Grandes Marques</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pb-3">
+        <div class="text-center">
+          <p style="font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem;">Hi-Fi</p>
+          <p style="font-size: 0.95rem; color: #666;">DENON • MARANTZ • YAMAHA • BOWERS & WILKINS • INTEGRA • ONKYO • KLIPSCH</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-3">
+        <div class="text-center">
+          <p style="font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem;">Instruments de Musique</p>
+          <p style="font-size: 0.95rem; color: #666;">ROLAND MUSIQUE • YAMAHA MUSIQUE • LINE 6 • AMPEG</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pb-3">
+        <div class="text-center">
+          <p style="font-weight: 700; color: #1a1a1a; margin-bottom: 0.5rem;">Audio Professionnel</p>
+          <p style="font-size: 0.95rem; color: #666;">YAMAHA PRO-AUDIO • ROLAND DJ • CLASSE AUDIO • PIONEER</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== APPEL À L'ACTION ======================== -->
+<section class="cta-contact">
+  <div class="container">
+    <h2>Vous cherchez une pièce spécifique ?</h2>
+    <p>Notre équipe technique vous aide à identifier et trouver la pièce adaptée à votre appareil</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="tel:+33437480823" class="btn btn-light">
+        <i class="bi bi-telephone"></i> Appeler le 04 37 48 08 23
+      </a>
+      <a href="mailto:sav@oxygen.fr" class="btn btn-light">
+        <i class="bi bi-envelope"></i> Email: sav@oxygen.fr
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="bg-primary pt-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 me-auto py-3">
+        <a href="#" class="d-inline-block fw-bold h2 link-light mb-4 text-decoration-none text-uppercase">OXYGEN SAV</a>
+        <p class="mb-3">23, Rue LORTET</p>
+        <p class="mb-3"><b>69007 LYON</b></p>
+        <div class="mb-4">
+          <a href="tel:+33437480823" class="link-light text-decoration-none">+33 (0)4 37 48 08 23</a><br>
+          <a href="mailto:sav@oxygen.fr" class="link-light text-decoration-none">sav@oxygen.fr</a>
+        </div>
+      </div>
+
+      <div class="col-sm-7 col-xl-4 py-3">
+        <h2 class="fw-bold h5 mb-4 text-uppercase">Services</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="index.html" class="link-light text-decoration-none">Garanties Constructeurs</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Réparer Hors Période de Garantie</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Réparations VINTAGE</a></li>
+          <li class="mb-3"><a href="pieces-detachees.html" class="link-light text-decoration-none">Vente Pièces Détachées</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Déplacements</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 col-xl-3 py-3">
+        <h2 class="fw-bold h5 mb-4 text-uppercase">Autres</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Notre Entreprise</a></li>
+          <li class="mb-3"><a href="marques.html" class="link-light text-decoration-none">Agréments</a></li>
+          <li class="mb-3"><a href="marques.html" class="link-light text-decoration-none">Marques traitées</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Garantie des Réparations</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Garantie Pièces</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pb-3 pt-3 text-center">
+      <hr class="border-light mt-0">
+      <p class="mb-0">Copyright &copy; 1991&ndash;2026 &nbsp; OXYGEN SAV</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
