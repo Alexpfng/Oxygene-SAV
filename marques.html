@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Liste complète des marques agréées et traitées par OXYGEN SAV — Centre de réparation Hi-Fi, Audio-Pro et Instruments de Musique à Lyon.">
+  <meta name="author" content="Yves CHADI">
+  <title>Marques Traitées — OXYGEN SAV</title>
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a3d8f 100%);
+      padding: 3.5rem 0 3rem;
+      color: #fff;
+    }
+    .page-hero h1 { font-weight: 800; letter-spacing: -.01em; }
+    .page-hero p   { color: rgba(255,255,255,.85); font-size: 1rem; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #0d6efd;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: .35rem;
+    }
+
+    /* Grille marques agréées */
+    .brand-agreed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .brand-agreed-card {
+      background: #fff;
+      border: 1px solid #e6e9ee;
+      border-top: 3px solid #0d6efd;
+      border-radius: .5rem;
+      padding: 1.25rem 1rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .brand-agreed-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 .6rem 1.5rem rgba(13,110,253,.13);
+    }
+    .brand-agreed-card .brand-icon {
+      flex-shrink: 0;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: #e8f0fe;
+      display: flex; align-items: center; justify-content: center;
+      color: #0d6efd;
+    }
+    .brand-agreed-card .brand-name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: #1a1a1a;
+      line-height: 1.25;
+    }
+    .brand-agreed-card .brand-sub {
+      font-size: 11px;
+      color: #888;
+      margin-top: 1px;
+    }
+    .badge-agreed {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      background: #e8f0fe;
+      color: #0d6efd;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      border-radius: 2rem;
+      padding: .25rem .65rem;
+    }
+
+    /* Grille marques autres */
+    .brand-other-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: .75rem;
+    }
+    .brand-other-card {
+      background: #f5f7fa;
+      border-radius: .4rem;
+      padding: .9rem 1rem;
+      font-weight: 700;
+      font-size: .88rem;
+      color: #333;
+      text-align: center;
+      letter-spacing: .03em;
+      transition: background .15s ease, color .15s ease;
+    }
+    .brand-other-card:hover {
+      background: #0d6efd;
+      color: #fff;
+    }
+
+    .divider-section {
+      border: none;
+      border-top: 1px solid #e6e9ee;
+      margin: 3rem 0;
+    }
+    .note-box {
+      background: #fff8e1;
+      border-left: 4px solid #ffc107;
+      border-radius: 0 .4rem .4rem 0;
+      padding: 1rem 1.25rem;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ======================== HEADER ======================== -->
+<header>
+  <div class="py-1">
+    <div class="container-fluid">
+      <div class="align-items-center g-0 row">
+        <div class="col">
+          <div class="py-1 ps-md-3">
+            <a href="tel:+33437480823" class="me-md-3 text-decoration-none">
+              <span class="me-md-1">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"/>
+                </svg>
+              </span>
+              <span>04 37 48 08 23</span>
+            </a>
+            <a href="mailto:sav@oxygen.fr" class="text-decoration-none">
+              <span class="me-md-1">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z"/>
+                </svg>
+              </span>
+              <span>sav@oxygen.fr</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bg-primary navbar navbar-dark navbar-expand-lg py-2 navbar-oxygen">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/Logo_NEW_Lighted_.png" alt="OXYGEN SAV" class="img-fluid logo-navbar">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMarques" aria-controls="navbarMarques" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMarques">
+        <ul class="ms-auto navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link px-lg-3 py-lg-4 text-uppercase" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Horaires</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Accueil</a>
+              <a class="dropdown-item" href="#">Téléphone</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Réparations</a>
+              <a class="dropdown-item" href="#">Vente Pièces</a>
+              <a class="dropdown-item" href="#">Déplacements</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle active nav-link px-lg-3 py-lg-4 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Téléphone</a>
+              <a class="dropdown-item" href="#">Mail</a>
+              <a class="dropdown-item" href="#">Adresse Postale</a>
+              <a class="dropdown-item" href="#">Google Maps</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-lg-3 py-lg-4 text-uppercase" href="#">English</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================== PAGE HERO ======================== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <p class="mb-2" style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);">Centre Technique Multi-Marques</p>
+        <h1 class="mb-2">Marques traitées</h1>
+        <p class="mb-0">Retrouvez ci-dessous l'ensemble des marques pour lesquelles nous sommes habilités — agréments officiels constructeurs et autres marques prises en charge.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+        <a href="index.html" class="btn btn-outline-light btn-sm">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== MARQUES AGRÉÉES ======================== -->
+<section class="pt-5 pb-4">
+  <div class="container">
+
+    <div class="d-flex align-items-start justify-content-between flex-wrap gap-3 mb-4">
+      <div>
+        <p class="section-label mb-1">Certifications officielles</p>
+        <h2 class="section-title">Marques Agréées Constructeur</h2>
+        <p style="font-size:14px;color:#666;margin-bottom:0;">Réparateur agréé directement mandaté par le constructeur. Interventions sous garantie et hors garantie.</p>
+      </div>
+      <span class="badge-agreed align-self-center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+          <path d="M12 22c3.5-1.5 8-5 8-10V6l-8-3-8 3v6c0 5 4.5 8.5 8 10z"/>
+          <path d="M9 12l3 3 4-4"/>
+        </svg>
+        15 agréments officiels
+      </span>
+    </div>
+
+    <div class="brand-agreed-grid">
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-music-note-beamed"></i></div>
+        <div><div class="brand-name">AMPEG</div><div class="brand-sub">Amplification basse</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-speaker"></i></div>
+        <div><div class="brand-name">Bowers &amp; Wilkins</div><div class="brand-sub">Enceintes acoustiques</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-hifi"></i></div>
+        <div><div class="brand-name">CLASSE AUDIO</div><div class="brand-sub">Amplification Hi-Fi</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-reception-4"></i></div>
+        <div><div class="brand-name">DENON</div><div class="brand-sub">Hi-Fi &amp; Home Cinema</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-reception-4"></i></div>
+        <div><div class="brand-name">INTEGRA</div><div class="brand-sub">Audio-Vidéo</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-speaker-fill"></i></div>
+        <div><div class="brand-name">KLIPSCH</div><div class="brand-sub">Enceintes acoustiques</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-guitar"></i></div>
+        <div><div class="brand-name">LINE6</div><div class="brand-sub">Instruments &amp; effets</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-hifi"></i></div>
+        <div><div class="brand-name">MARANTZ</div><div class="brand-sub">Hi-Fi &amp; Home Cinema</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-reception-4"></i></div>
+        <div><div class="brand-name">ONKYO</div><div class="brand-sub">Hi-Fi &amp; Home Cinema</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-hifi"></i></div>
+        <div><div class="brand-name">PIONEER HiFi</div><div class="brand-sub">Hi-Fi &amp; Home Cinema</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-music-note-list"></i></div>
+        <div><div class="brand-name">ROLAND Musique</div><div class="brand-sub">Instruments &amp; MIDI</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-vinyl"></i></div>
+        <div><div class="brand-name">YAMAHA Hi-Fi</div><div class="brand-sub">Amplificateurs &amp; tuners</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-music-note-beamed"></i></div>
+        <div><div class="brand-name">YAMAHA Musique</div><div class="brand-sub">Instruments de musique</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-broadcast"></i></div>
+        <div><div class="brand-name">YAMAHA Pro-Audio</div><div class="brand-sub">Sonorisation professionnelle</div></div>
+      </div>
+
+      <div class="brand-agreed-card">
+        <div class="brand-icon"><i class="bi bi-building"></i></div>
+        <div><div class="brand-name">YAMAHA Commercial</div><div class="brand-sub">Audio commercial</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider-section">
+
+<!-- ======================== AUTRES MARQUES ======================== -->
+<section class="pb-5">
+  <div class="container">
+
+    <div class="mb-4">
+      <p class="section-label mb-1">Hors agrément constructeur</p>
+      <h2 class="section-title">Autres Marques Traitées</h2>
+      <p style="font-size:14px;color:#666;margin-bottom:1.25rem;">Réparations acceptées hors garantie constructeur, selon disponibilité des pièces et faisabilité technique.</p>
+      <div class="note-box">
+        <strong>Note :</strong> Cette liste n'est pas exhaustive. Contactez-nous pour toute marque non listée — nous étudions chaque demande au cas par cas.
+      </div>
+    </div>
+
+    <div class="brand-other-grid mt-4">
+      <div class="brand-other-card">SONY</div>
+      <div class="brand-other-card">JBL</div>
+      <div class="brand-other-card">HARMAN KARDON</div>
+      <div class="brand-other-card">NAD</div>
+      <div class="brand-other-card">CAMBRIDGE AUDIO</div>
+      <div class="brand-other-card">ROTEL</div>
+      <div class="brand-other-card">ARCAM</div>
+      <div class="brand-other-card">TECHNICS</div>
+      <div class="brand-other-card">KENWOOD</div>
+      <div class="brand-other-card">TEAC</div>
+      <div class="brand-other-card">FOCAL</div>
+      <div class="brand-other-card">SANSUI</div>
+      <div class="brand-other-card">AKAI</div>
+      <div class="brand-other-card">REVOX</div>
+      <div class="brand-other-card">GRUNDIG</div>
+      <div class="brand-other-card">BANG &amp; OLUFSEN</div>
+      <div class="brand-other-card">LUXMAN</div>
+      <div class="brand-other-card">ACCUPHASE</div>
+      <div class="brand-other-card">McINTOSH</div>
+      <div class="brand-other-card">LINN</div>
+      <div class="brand-other-card">NAIM</div>
+      <div class="brand-other-card">MUSICAL FIDELITY</div>
+      <div class="brand-other-card">CREEK</div>
+      <div class="brand-other-card">PIONEER DJ</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================== CONTACT CTA ======================== -->
+<section class="pb-5 pt-4 text-center text-secondary" style="background:#f5f7fa;">
+  <div class="container py-4">
+    <h2 class="fw-bold text-dark mb-2">Votre marque n'est pas listée ?</h2>
+    <p class="fw-light mb-4" style="color:#666;">Contactez-nous, nous étudierons votre demande de réparation.</p>
+    <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+  </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="bg-primary pt-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 me-auto py-3">
+        <a href="index.html" class="d-inline-block fw-bold h2 link-light mb-4 text-decoration-none text-uppercase">OXYGEN SAV</a>
+        <p class="mb-3">23, Rue LORTET</p>
+        <p class="mb-3"><b>69007 LYON</b></p>
+        <div class="mb-4">
+          <a href="tel:+33437480823" class="link-light text-decoration-none">+33 (0)4 37 48 08 23</a><br>
+          <a href="mailto:sav@oxygen.fr" class="link-light text-decoration-none">sav@oxygen.fr</a>
+        </div>
+      </div>
+
+      <div class="col-sm-7 col-xl-4 py-3">
+        <h2 class="fw-bold h5 mb-4 text-uppercase">Services</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Garanties Constructeurs</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Réparer Hors Période de Garantie</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Réparations VINTAGE</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Vente Pièces Détachées</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Déplacements</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 col-xl-3 py-3">
+        <h2 class="fw-bold h5 mb-4 text-uppercase">Autres</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="index.html" class="link-light text-decoration-none">Notre Entreprise</a></li>
+          <li class="mb-3"><a href="marques.html" class="link-light text-decoration-none">Agréments</a></li>
+          <li class="mb-3"><a href="marques.html" class="link-light text-decoration-none">Marques traitées</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Garantie des Réparations</a></li>
+          <li class="mb-3"><a href="#" class="link-light text-decoration-none">Garantie Pièces</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pb-3 pt-3 text-center">
+      <hr class="border-light mt-0">
+      <p class="mb-0">Copyright &copy; 1991&ndash;2026 &nbsp; OXYGEN SAV</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
