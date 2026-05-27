@@ -121,6 +121,61 @@
       font-size: 14px;
       color: #555;
     }
+
+    @media (max-width: 992px) {
+      .page-hero {
+        padding: clamp(2rem, 6vw, 3rem) 0;
+      }
+      .page-hero h1 {
+        font-size: clamp(2.3rem, 6vw, 3.2rem);
+      }
+      .brand-agreed-grid {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      }
+      .brand-other-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .brand-agreed-card,
+      .brand-other-card {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 2rem 0 2.5rem;
+      }
+      .page-hero h1 {
+        font-size: 2.4rem;
+      }
+      .brand-agreed-card {
+        gap: .5rem;
+      }
+      .brand-agreed-card .brand-name {
+        font-size: .9rem;
+      }
+      .brand-other-card {
+        font-size: .85rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-dark .navbar-nav .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .brand-agreed-grid,
+      .brand-other-grid {
+        gap: .65rem;
+      }
+      .brand-agreed-card,
+      .brand-other-card {
+        padding: .85rem;
+      }
+      .brand-agreed-card .brand-name {
+        font-size: .85rem;
+      }
+    }
   </style>
 </head>
 <body>
