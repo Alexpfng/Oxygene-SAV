@@ -1,0 +1,9 @@
+# robots.txt for OXYGEN SAV
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://alexpfng.github.io/Oxygene-SAV/sitemap.xml
+
+# Optional host directive (use your canonical host)
+Host: alexpfng.github.io
